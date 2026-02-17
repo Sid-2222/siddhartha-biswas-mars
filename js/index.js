@@ -7,7 +7,7 @@
     const copyright = document.createElement('p');
 
     const skills = ["JavaScript", "HTML", "CSS", "Android Studio",
-                    "GitHub", "Java", "JSON", "FireBase", "XML"];
+                    "GitHub", "Java", "JSON", "FireBase", "XML",];
 
     const skillsSection = document.getElementById('skills');
     const skillsList = skillsSection.querySelector('ul'); 
@@ -26,15 +26,15 @@ footer.style.textDecoration = 'underline';
 
 skillsSection.style.textDecoration = 'underline';
 skillsSection.style.fontWeight = 'bold';
-skillsList.style.color = 'rgba(242, 168, 40, 1)';
+skillsList.style.color = 'grey';
 
 // Styling portion ends
 
 
 // genral operatioins 
 
-copyright.innerHTML= "© Siddhartha Biswas " +thisYear;
-footer.innerHTML = copyright.innerHTML;
+copyright.innerHTML= "&copy; Siddhartha Biswas " +thisYear;
+footer.appendChild(copyright);
 document.body.appendChild(footer);
 
 for(let i = 0; i < skills.length; i++){
