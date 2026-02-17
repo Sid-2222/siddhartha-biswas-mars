@@ -8,6 +8,9 @@ body{
      font-family: "Poppins", sans-serif;
      color: darkslategrey;
 }
+#container{
+    max-width: 1024px;
+}
 
 #about{
     margin: 10px;
@@ -15,14 +18,26 @@ body{
     text-align: center;
    
 }
-#Experience{
 
-}
 
 #skills{
     
     text-align: center;
-   
+}
+
+#skill-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#skill-list li {
+  background-color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
 }
 
 #projects{
@@ -181,8 +196,11 @@ nav ul {
      display: flex;
      gap: 12px;
      justify-content:space-evenly;
-     color:#f17b0c;
  }
+
+  #skill-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
    }
 
@@ -224,5 +242,9 @@ nav ul {
      justify-content:space-evenly;
      padding: 0;
  }
+
+ #skill-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
  }
