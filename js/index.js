@@ -50,7 +50,7 @@ for(let i = 0; i < skills.length; i++){
 
 const messageForm = document.forms["leave_message"];
 messageForm.addEventListener("submit", function(event){
-    
+    event.preventDefault();
     const usersName = event.target.usersName.value;
     const usersEmail = event.target.usersEmail.value;
     const usersMessage = event.target.usersMessage.value;
@@ -61,7 +61,7 @@ messageForm.addEventListener("submit", function(event){
     const newMessage =document.createElement("li");
 
     newMessage.innerHTML = `
-      <a href="mailto:${usersEmail}">${usersName}</a> <span> ${usersEmail} </span>
+      <a href="mailto:${usersEmail}">${usersName}</a>
       <span> ${usersMessage} </span>
     `;
 
@@ -75,9 +75,7 @@ messageForm.addEventListener("submit", function(event){
     });
 
      newMessage.appendChild(removeButton);
-     messageList.appendChild(newMessage);
-
-    event.preventDefault();
+     messageList.appendChild(newMessage);    
     messageForm.reset();
 
 });
