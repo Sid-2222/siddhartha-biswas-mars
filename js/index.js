@@ -76,11 +76,43 @@ messageForm.addEventListener("submit", function(event){
 
      newMessage.appendChild(removeButton);
      messageList.appendChild(newMessage);    
-    messageForm.reset();
+     messageForm.reset();
+    });
 
-});
+ // Lesson 13 codes Fetch API
+    
+   
 
 
 
+const apiUrl = "https://api.github.com/users/Sid-2222/repos";
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul')
 
+fetch(apiUrl)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(repositories => {
+        
+        // repositories.forEach(repo => {
+        //     console.log(repo.name); 
+        // });
 
+        for (let i = 0; i < repositories.length; i++) {
+            const project = document.createElement('li');
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+        }
+
+        console.log(repositories); 
+
+    })
+    .catch(error => {
+        console.error("Error fetching the repositories:", error);
+    });
+
+   
