@@ -42,11 +42,57 @@ body{
   border-radius: 8px;
 }
 
-#projects{
-    
-    text-align: center;
-   
+/* projects */
+
+#projects {
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #53f219;
+  border-radius: 8px;
+  margin-bottom: 50px;
 }
+
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Styling each project (li) */
+#projects li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  size: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+#projects li:hover {
+  transform: scale(1.05);
+}
+
+#projects li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#projects li span {
+  color: #555;
+  font-size: 0.9em;
+}
+
 
 #experience{
     margin: 10px;
@@ -157,6 +203,11 @@ nav ul {
      gap: 20px;
      justify-content: center
      
+     
+ }
+
+ .nav-menu li {
+    font-size: 1.3rem;
  }
 
 
@@ -226,12 +277,8 @@ form[name="leave_message"] button:hover {
         font-size: 20px;
         color: #0077ff;
     }
-/* 
 
-    #image{
-    text-align: center;
-    height: 200px; */
-}
+
 
     .experience-list{
         flex-direction: column;
@@ -257,6 +304,10 @@ form[name="leave_message"] button:hover {
      justify-content:space-evenly;
  }
 
+ .nav-menu li {
+    font-size: .7rem;
+ }
+
   #skill-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -280,7 +331,15 @@ form[name="leave_message"] button:hover {
     font-size: 18px;
   }
 
-   
+    #projects ul {
+    justify-content: flex-start;
+  }
+
+  #projects li {
+    width: 100%;
+  }
+
+}
 
    /* =====================================
    mobile Style
@@ -327,6 +386,10 @@ form[name="leave_message"] button:hover {
      padding: 0;
  }
 
+ .nav-menu li {
+    font-size: .5rem;
+ }
+
  #skill-list {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -348,6 +411,15 @@ form[name="leave_message"] button:hover {
     padding: 16px;
     font-size: 16px;
     width: auto;  
+  }
+
+  #projects h2 {
+    font-size: 1.5em;
+  }
+
+  #projects li {
+    width: 100%;
+    padding: 12px;
   }
 
 }
