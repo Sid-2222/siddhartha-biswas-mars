@@ -94,27 +94,6 @@ body{
 }
 
 
-@media (max-width: 768px) {
-  #projects ul {
-    justify-content: flex-start;
-  }
-
-  #projects li {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  #projects h2 {
-    font-size: 1.5em;
-  }
-
-  #projects li {
-    width: 100%;
-    padding: 12px;
-  }
-}
-
 #experience{
     margin: 10px;
     padding: 10px;
@@ -224,6 +203,11 @@ nav ul {
      gap: 20px;
      justify-content: center
      
+     
+ }
+
+ .nav-menu li {
+    font-size: 1.3rem;
  }
 
 
@@ -293,12 +277,8 @@ form[name="leave_message"] button:hover {
         font-size: 20px;
         color: #0077ff;
     }
-/* 
 
-    #image{
-    text-align: center;
-    height: 200px; */
-}
+
 
     .experience-list{
         flex-direction: column;
@@ -324,6 +304,10 @@ form[name="leave_message"] button:hover {
      justify-content:space-evenly;
  }
 
+ .nav-menu li {
+    font-size: .7rem;
+ }
+
   #skill-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -347,7 +331,15 @@ form[name="leave_message"] button:hover {
     font-size: 18px;
   }
 
-   
+    #projects ul {
+    justify-content: flex-start;
+  }
+
+  #projects li {
+    width: 100%;
+  }
+
+}
 
    /* =====================================
    mobile Style
@@ -394,6 +386,10 @@ form[name="leave_message"] button:hover {
      padding: 0;
  }
 
+ .nav-menu li {
+    font-size: .5rem;
+ }
+
  #skill-list {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -415,6 +411,15 @@ form[name="leave_message"] button:hover {
     padding: 16px;
     font-size: 16px;
     width: auto;  
+  }
+
+  #projects h2 {
+    font-size: 1.5em;
+  }
+
+  #projects li {
+    width: 100%;
+    padding: 12px;
   }
 
 }

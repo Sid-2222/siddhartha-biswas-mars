@@ -81,13 +81,10 @@ messageForm.addEventListener("submit", function(event){
 
  // Lesson 13 codes Fetch API
     
-   
-
-
-
 const apiUrl = "https://api.github.com/users/Sid-2222/repos";
 const projectSection = document.getElementById('projects');
 const projectList = projectSection.querySelector('ul')
+
 
 fetch(apiUrl)
     .then(response => {
@@ -97,14 +94,23 @@ fetch(apiUrl)
         return response.json();
     })
     .then(repositories => {
-        
-        // repositories.forEach(repo => {
-        //     console.log(repo.name); 
-        // });
 
         for (let i = 0; i < repositories.length; i++) {
+
             const project = document.createElement('li');
-            project.innerText = repositories[i].name;
+            const title = document.createElement("h3");
+            const desc = document.createElement("p");
+            title.textContent =repositories[i].name;
+           
+            if(repositories[i].description== null){
+                desc.textContent = "No Description So far";
+            }else{
+                
+                desc.textContent = repositories[i].description;
+            }
+            
+            project.appendChild(title);
+            project.appendChild(desc);
             projectList.appendChild(project);
         }
 
@@ -114,5 +120,3 @@ fetch(apiUrl)
     .catch(error => {
         console.error("Error fetching the repositories:", error);
     });
-
-   
